@@ -10,7 +10,7 @@ This folder contains two Python scripts for port scanning:
 Port scanning is a network security technique used to identify open ports on a host. Each port corresponds to a specific service or application running on the machine. By scanning for open ports, you can potentially discover vulnerabilities or gain insights into the services available on a host.
 
 **Important Note**: Port scanning should only be performed on networks where you have explicit permission. Unauthorized scanning is a violation of security policies and may be illegal.
-
+ 
 ## Usage
 
 #### Basic_Port_Scanner.py:
