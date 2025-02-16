@@ -34,6 +34,20 @@ if len(sys.argv) >= 3:
 if len(sys.argv) >= 4:
     end_port = int(sys.argv[3])
 
+open_ports = []  # Store open ports
+total_ports = end_port - start_port + 1 # Calculate the total number of ports to be scanned
+
 for port in range(start_port, end_port + 1):
     if check_port_status(ip, port):
-        print(f"Open port found: {port}")
+        open_ports.append(port)
+
+print(f"Scan Results for {ip}:")
+print(f"\nTotal Ports Scanned: {total_ports}") # Print the total number of ports scanned
+print(f"Open Ports Found: {len(open_ports)}\n")
+
+if open_ports:
+    print("Open Ports:")
+    for port in open_ports:
+        print(f"- {port}")
+else:
+    print("No open ports found.")
